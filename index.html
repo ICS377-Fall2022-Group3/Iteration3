@@ -10,9 +10,29 @@
 </head>
 
 <body>
-
+<div class="main-container">
+		<div class="header">
+			<img src="images/spotify-logo.png" alt="Spotify Logo" />
+		</div>
+		<div class="card-container">
+			<div class="card">
+				<div class="card-header">
+					<div class="exit">
+						<a href="https://open.spotify.com/">
+							<i class="fa-regular fa-circle-xmark fa-2xl"></i>
+						</a>
+					</div>
+				</div>
+				<div class="card-content">
+					<h1>What would you like recommendations for?</h1>
+					<div class="btngrp">
+						<button type="button" onclick="window.location='mainMusic.html';" class="btn">Music</button>
+						<input type="button" onclick="window.location='mainPodcast.html';" class="btn" value="Podcasts">
+						<input type="button" onclick="window.location='mainAudioBook.html';" class="btn" value="Audiobooks">
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </body>
-
 </html>
