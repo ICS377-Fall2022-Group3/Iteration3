@@ -19,16 +19,18 @@ img{
 	border: 2px solid white;
 	border-radius: 20px;
 	margin: auto;
+	
 }
 .card-header {
 	width: 100%;
 	height: 64px;
-	
+	border:2px blue;
 }
 
 .card-content {
 	position:relative;
 	height:75%;
+	border:2px red;
 }
 .player {
 	text-align: center;
@@ -84,13 +86,14 @@ h1{
 .btngrp{
 	position:relative;
 	text-align: center;
-	top: 60%;
+	top: 20%;
 	margin:auto;
 	width: 200px;
 	height: 100px;
 	border-radius: 20px;
 	font-size: 24px;
 	background-color: #2986cc;
+	border:2px green;
 }
 .btn:hover{
 	cursor: pointer;
