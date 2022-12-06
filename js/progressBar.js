@@ -10,36 +10,42 @@ const infoLink = document.getElementById("infoLink");
 
 const steps = document.querySelectorAll(".step");
 let active = 1;
-let likedContent = new Array(10);
+var likedContent = new Array(10);
+
+
 
 infoLink.addEventListener("click", () => {
   // @ts-ignore
-  document.getElementById("infoLink").href = "index.html";
+  document.getElementById("infoLink").href = "index.html"; //need to add specific pages
+
 })
 
 downVote.addEventListener("click", () => {
   active++;
   if (active > steps.length) {
-    active = steps.length;
+    window.location.href = "results.html";    
   }
   updateProgress();
   getSongSource();
 });
   
 upVote.addEventListener("click", () => {
-  likedContent[active-1] = "song";
   active++;
+  likedContent[active-1] = "song";
+  
   if (active > steps.length) {
-    active = steps.length;
+    window.location.href = "results.html"; 
   }
   updateProgress();
   getSongSource();
+  
 });
 
 progressNext.addEventListener("click", () => {
   active++;
   if (active > steps.length) {
-    active = steps.length;
+    //active = steps.length;
+    window.location.href = "results.html"; 
   }
   updateProgress();
   getSongSource();
@@ -129,3 +135,21 @@ const updateProgress = () => {
     progressNext.disabled = false;
   }
 };
+
+function setResults() {
+  let myList = document.getElementById("mySelections");
+  
+   let li = document.createElement("li");
+      li.innerText = "item 1";
+      myList.appendChild(li);
+      
+  //	likedContent.forEach((item, index) => {
+    for (var i=0; i < likedContent.length; i++){
+      console.log('index: ' + i + ' Value: ' + likedContent[i]);
+      //let li = document.createElement("li");
+      //li.innerText = item;
+      //myList.appendChild(li);
+     // });
+     }     
+}
+
