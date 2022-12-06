@@ -19,30 +19,32 @@
 			<div class="card">
 				<div class="card-header">
                     <div class="history">
-                    	<i class="fa-solid fa-angle-left fa-2xl"></i> <i class="fa-solid fa-angle-right fa-2xl"></i>
+                    	<button id="progress-prev" class="historyButton" disabled title="Back"><i class="fa-solid fa-angle-left fa-2xl"></i></button>
+                    	<button id="progress-next" class="historyButton" title="Forward"> <i class="fa-solid fa-angle-right fa-2xl"></i></button>
                     </div>
 					<div class="exit">
-						<a href="https://open.spotify.com/">
+						<a href="https://open.spotify.com/" title="Exit to Spotify">
 							<i class="fa-regular fa-circle-xmark fa-2xl"></i>
 						</a>
 					</div>
 				</div>
                 <div class="navbar">
-                    <button type="button" onclick="window.location='mainMusic.html';" class="nav-btn left">Music</button>
-                    <button type="button" onclick="window.location='mainPodcast.html';" class="nav-btn">Podcasts</button>
-                    <button type="button" onclick="window.location='mainAudioBook.html';" class="nav-btn right">Audiobooks</button>
+                    <button type="button" onclick="window.location='mainMusic.html';" class="nav-btn left" title="Music">Music</button>
+                    <button type="button" onclick="window.location='mainPodcast.html';" class="nav-btn" title="Podcasts">Podcasts</button>
+                    <button type="button" onclick="window.location='mainAudioBook.html';" class="nav-btn right" title="Audiobooks">Audiobooks</button>
                 </div>
 				<div class="card-content">
                     <div class="voting">
-                        <button id="progress-prev" class="btnVote" disabled><img class="vote" src="images/thumbs-down.png" alt="Downvote" /></button>
+                        <button id="downVote" class="thumb"><img class="vote" src="images/thumbs-down.png" alt="Downvote" title="Dislike" /></button>
                     <div></div>
-                       	<button id="progress-next" class="btnVote"><img class="vote" src="images/thumbs-up.png" alt="Upvote" /></button>
+                       	<button id="upVote" class="thumb"><img class="vote" src="images/thumbs-up.png" alt="Upvote" title="Like" /></button>
                     </div>
                     <div class="player">
-                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6GqqGv8frU7kqzXkm2rewI?utm_source=generator&theme=0" 
+                        <iframe id="playContent" style="border-radius:12px" src="https://open.spotify.com/embed/track/6GqqGv8frU7kqzXkm2rewI?utm_source=generator&theme=0" 
                         width="75%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
                         loading="lazy"></iframe>
                     </div>
+                    <div class="info"><a id="infoLink" href="mainPodcast.html" alt="Information" title="Information"><i class="fa-solid fa-circle-info fa-2xl"></i></a></div>
 				</div>
 				<div id="progress">
 				  <div id="progress-bar"></div>
@@ -59,7 +61,7 @@
 				    <li class="step">10</li>
 				  </ul>
 				</div>	
-			</div>		
+			</div>	
 		</div>
     </div>
     <script src="js/progressBar.js"></script>

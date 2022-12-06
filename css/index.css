@@ -39,10 +39,17 @@ img{
 	text-align: center;
 	
 }
+.historyButton {
+	background-color:transparent;
+	border:transparent;
+	width: 20px;
+	height: 20px;
+}
 .nav-btn {
 	background-color: #2986cc;
 	font-size: 18px;
 	padding: 10px;
+	width:150px;
 }
 .nav-btn.left {
 	border-radius: 10px 0 0 10px;
@@ -99,10 +106,19 @@ h1{
 	font-size: 24px;
 	background-color: #2986cc;
 }
-.btnVote{
+.thumb{
 	background-color:transparent;
+	border:transparent;
+	width: 100px;
+	height: 100px;
+	margin:auto;
 }
-.btnVote:hover{
+.thumb:hover{
 	cursor: pointer;
 	background-color: #2986cc;
+}
+.info{
+	text-align:left;
+	margin-left: 200px;
+	
 }
