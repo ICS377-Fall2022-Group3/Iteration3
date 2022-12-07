@@ -45,7 +45,7 @@
   z-index: 1;
 }
 #progress-num .step.active {
-  border-color: #2986cc;
-  background-color: #2986cc;
+  border-color: #1DB954;
+  background-color: #1DB954;
   color: #fff;
 }
