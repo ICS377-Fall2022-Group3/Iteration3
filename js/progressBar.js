@@ -8,9 +8,9 @@ const downVote = document.getElementById("downVote");
 const upVote = document.getElementById("upVote");
 const infoLink = document.getElementById("infoLink");
 
+var likedContent = Array(10);
 const steps = document.querySelectorAll(".step");
 let active = 1;
-var likedContent = new Array(10);
 
 
 
@@ -26,18 +26,22 @@ downVote.addEventListener("click", () => {
     window.location.href = "results.html";    
   }
   updateProgress();
-  getSongSource();
+  getSongSource(active);
 });
   
 upVote.addEventListener("click", () => {
   active++;
-  likedContent[active-1] = "song";
+  // @ts-ignore
+  
+  // @ts-ignore
+  sessionStorage.setItem(active-1, 'true');
+ // window.alert(likedContent[active-1]);
   
   if (active > steps.length) {
     window.location.href = "results.html"; 
   }
   updateProgress();
-  getSongSource();
+  getSongSource(active);
   
 });
 
@@ -48,7 +52,7 @@ progressNext.addEventListener("click", () => {
     window.location.href = "results.html"; 
   }
   updateProgress();
-  getSongSource();
+  getSongSource(active);
 });
 
 progressPrev.addEventListener("click", () => {
@@ -57,12 +61,12 @@ progressPrev.addEventListener("click", () => {
     active = 1;
   }
   updateProgress();
-  getSongSource();
+  getSongSource(active);
 });
 
-function getSongSource(){
+function getSongSource(activeTrack){
   // @ts-ignore
-  switch (active) {
+  switch (activeTrack) {
   case 1:
     // @ts-ignore
     document.getElementById("playContent").src = "https://open.spotify.com/embed/track/6GqqGv8frU7kqzXkm2rewI?utm_source=generator&theme=0";
@@ -137,19 +141,45 @@ const updateProgress = () => {
 };
 
 function setResults() {
-  let myList = document.getElementById("mySelections");
   
-   let li = document.createElement("li");
-      li.innerText = "item 1";
-      myList.appendChild(li);
-      
-  //	likedContent.forEach((item, index) => {
-    for (var i=0; i < likedContent.length; i++){
-      console.log('index: ' + i + ' Value: ' + likedContent[i]);
-      //let li = document.createElement("li");
-      //li.innerText = item;
-      //myList.appendChild(li);
-     // });
-     }     
+	for (var i=0; i < likedContent.length; i++){
+   window.alert("liked Content length: " + likedContent.length)
+    // @ts-ignore
+    window.alert("SessionGetItem: " + "Index: " + i + sessionStorage.getItem(i));
+	   
+	    // @ts-ignore
+	    if(sessionStorage.getItem(i)=== "true"){
+        
+	     likedContent[i] = true;
+	     window.alert("liked Content after setting: " + likedContent[i]);
+	     
+	     let space = document.createElement("div");
+	     let tile = document.createElement("div");
+	     let container2 = document.createElement("label");
+	     let iframe = document.createElement("iframe");
+	     let check = document.createElement("input");
+	     let checkmark = document.createElement("span");
+	     space.className = "space";
+	     document.appendChild(space);
+	     tile.className = "tile";
+	     document.appendChild(tile);
+	     container2.className = "container2";
+	     document.appendChild(container2);
+	     iframe.id = "playContent";
+	     // @ts-ignore
+	     iframe.style = "border-radius:12px"
+	     iframe.src = "https://open.spotify.com/embed/playlist/37i9dQZF1DX2SFBzpAPi7n?utm_source=generator";
+	     iframe.width = "100%";
+	     iframe.height = "100";
+	     iframe.frameBorder="0";
+	     document.appendChild(iframe);
+	     check.type = "checkbox";
+	     check.checked = true;
+	     checkmark.className = "checkmark";
+	     document.appendChild(check);
+	     document.appendChild(checkmark);
+	    }
+ }    		
+						
 }
 
