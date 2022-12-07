@@ -28,8 +28,9 @@ img{
 }
 
 .card-content {
+	padding-top: 10px;
 	position:relative;
-	height:75%;
+	height:60%;
 	border:2px red;
 }
 .player {
@@ -61,7 +62,7 @@ img{
 }
 .voting {
 	display: grid;
-  	grid-template-columns: 1fr 1fr 1fr;
+  	grid-template-columns: 1fr 2fr 1fr;
 	text-align: center;
 }
 h1{
@@ -77,6 +78,7 @@ h1{
 	float: left;
 	margin-top: 22px;
 	margin-right: 16px;
+	margin-left: 10px;
 }
 .exit{
 	float: right;
@@ -203,6 +205,11 @@ h1{
 	background-color: #2986cc;
 }
 .info{
+	height: 32px;
+	width: 32px;
 	text-align:left;
-	margin-left: 200px;
+	margin-top: 10px;
+}
+#infoCircle {
+	margin-top: 16px;
 }
