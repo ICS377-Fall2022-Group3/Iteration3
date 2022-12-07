@@ -1,42 +1,93 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
+
 <head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" type="text/css" href="css/index.css" />
-<title>Spotify: Recommentations</title>
-<link rel="shortcut icon" href="images/logo-spotify-icon.png">
-<script src="https://kit.fontawesome.com/887323dcd1.js"	crossorigin="anonymous"></script>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<link rel="stylesheet" type="text/css" href="css/content.css" />
+	<title>Spotify: Recommentations</title>
+	<link rel="shortcut icon" href="images/logo-spotify-icon.png" />
+	<script src="https://kit.fontawesome.com/887323dcd1.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div class="main-container">
+	<div class="main-container">
 		<div class="header">
 			<img src="images/spotify-logo.png" alt="Spotify Logo" />
 		</div>
 		<div class="card-container">
 			<div class="card">
 				<div class="card-header">
-                    <div class="history">History</div>
+					<div class="history">
+						<button id="progress-prev" class="historyButton" disabled title="Back">
+							<i class="fa-solid fa-angle-left fa-2xl"></i>
+						</button>
+						<button id="progress-next" class="historyButton" title="Forward">
+							<i class="fa-solid fa-angle-right fa-2xl"></i>
+						</button>
+					</div>
 					<div class="exit">
-						<a href="https://open.spotify.com/">
+						<a href="https://open.spotify.com/" title="Exit to Spotify">
 							<i class="fa-regular fa-circle-xmark fa-2xl"></i>
 						</a>
 					</div>
 				</div>
-                <div class="navbar">
-                    <button type="button" onclick="window.location='mainMusic.html';" class="nav-btn left">Music</button>
-                    <button type="button" onclick="window.location='mainPodcast.html';" class="nav-btn">Podcasts</button>
-                    <button type="button" onclick="window.location='mainAudioBook.html';" class="nav-btn right">Audiobooks</button>
-                </div>
+				<div class="navbar">
+					<button type="button" onclick="window.location='mainMusic.html';" class="nav-btn left"
+						title="Music">
+						Music
+					</button>
+					<button type="button" onclick="window.location='mainPodcast.html';" class="nav-btn"
+						title="Podcasts">
+						Podcasts
+					</button>
+					<button type="button" onclick="window.location='mainAudioBook.html';" class="nav-btn right"
+						title="Audiobooks">
+						Audiobooks
+					</button>
+				</div>
 				<div class="card-content">
-                    <div class="voting">
-                        <img class="vote" src="images/thumbs-down.png" alt="Downvote" />
-                        <div>Pic Info</div>
-                        <img class="vote" src="images/thumbs-up.png" alt="Upvote" />
-                    </div>
+					<div class="voting">
+						<button id="downVote" class="thumb">
+							<img class="vote" src="images/thumbs-down.png" alt="Downvote" title="Dislike" />
+						</button>
+						<div class="player">
+							<iframe style="border-radius: 12px"
+								src="https://open.spotify.com/embed/episode/1ufllYjq3698eoNWOnCi6e?utm_source=generator&t=0"
+								width="100%" height="352" frameborder="0" allowfullscreen=""
+								allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+								loading="lazy"></iframe>
+						</div>
+						<button id="upVote" class="thumb">
+							<img class="vote" src="images/thumbs-up.png" alt="Upvote" title="Like" />
+						</button>
+						<div></div>
+						<div class="info">
+							<a id="infoLink" href="mainPodcast.html" alt="Information" title="Information">
+								<i id="infoCircle" class="fa-solid fa-circle-info fa-2xl"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div id="progress">
+					<div id="progress-bar"></div>
+					<ul id="progress-num">
+						<li class="step active">1</li>
+						<li class="step">2</li>
+						<li class="step">3</li>
+						<li class="step">4</li>
+						<li class="step">5</li>
+						<li class="step">6</li>
+						<li class="step">7</li>
+						<li class="step">8</li>
+						<li class="step">9</li>
+						<li class="step">10</li>
+					</ul>
 				</div>
 			</div>
 		</div>
-    </div>
+	</div>
+	<script src="js/progressBar.js"></script>
 </body>
+
 </html>
