@@ -6,11 +6,12 @@
 		<title>Spotify: Recommentations</title>
 		<link rel="shortcut icon" href="images/logo-spotify-icon.png">
 		<script src="https://kit.fontawesome.com/887323dcd1.js"	crossorigin="anonymous"></script>
+		<script src="js/progressBar.js"></script>
 	</head>
-	<body>
+	<body onload = "setResults()">
 		<div class="main-container">
 			<div class="header">
-				<img src="images/spotify-logo.png" alt="Spotify Logo" />
+				<a href="index.html"><img src="images/spotify-logo.png" alt="Spotify Logo" /></a>
 			</div>
 			<div class="card-container">
 				<div class="card">
@@ -87,7 +88,7 @@
 						</div>
 						<div class="tile">
 							<label class="switch">
-							<input type="checkbox">
+							<input type="checkbox" checked>
 							<span class="slider round"></span>
 							</label>
 							<p> Allow Spotify to add similar content </p>
