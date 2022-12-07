@@ -1,37 +1,38 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
+
 <head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" type="text/css" href="css/index.css" />
-<title>Spotify: Recommentations</title>
-<link rel="shortcut icon" href="images/logo-spotify-icon.png">
-<script src="https://kit.fontawesome.com/887323dcd1.js"	crossorigin="anonymous"></script>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<title>Spotify: Recommentations</title>
+	<link rel="shortcut icon" href="images/logo-spotify-icon.png">
+	<script src="https://kit.fontawesome.com/887323dcd1.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-<img src="images/spotify-logo.png" alt="Spotify Logo" />
-<div class="container">
-	<div class="row1">
-		<div class="exit"><a href="https://open.spotify.com/"><i class="fa-regular fa-circle-xmark fa-2xl"></i></a></div>
-		<h1>What would you like recommendations for?</h1> 
-	</div>
-	<div class="row2">
-		<div class="btngrp">
-		<button type="button" class="btn">Music</button>
+<div class="main-container">
+		<div class="header">
+			<img src="images/spotify-logo.png" alt="Spotify Logo" />
+		</div>
+		<div class="card-container">
+			<div class="card">
+				<div class="card-header">
+					<div class="exit">
+						<a href="https://open.spotify.com/">
+							<i class="fa-regular fa-circle-xmark fa-2xl"></i>
+						</a>
+					</div>
+				</div>
+				<div class="card-content">
+					<h1>What would you like recommendations for?</h1>
+					<div class="btngrp">
+						<button type="button" onclick="window.location='mainMusic.html';" class="btn">Music</button>
+						<input type="button" onclick="window.location='mainPodcast.html';" class="btn" value="Podcasts">
+						<input type="button" onclick="window.location='mainAudioBook.html';" class="btn" value="Audiobooks">
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
-	<div class="row3">	
-	<div class="btngrp">
-			<input type="button" class="btn" value="Podcasts">
-	</div>
-	</div>
-	<div class="row4">
-	<div class="btngrp">
-		<input type="button" class="btn" value="Audiobooks">
-	</div>
-	</div>
-	<div class="row5">
-	</div>		
-</div>
 </body>
 </html>
