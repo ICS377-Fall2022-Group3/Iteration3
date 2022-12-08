@@ -10,10 +10,10 @@
 	<script src="https://kit.fontawesome.com/887323dcd1.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body onload = "podInit()">
 	<div class="main-container">
 		<div class="header">
-			<img src="images/spotify-logo.png" alt="Spotify Logo" />
+			<a href="index.html"><img src="images/spotify-logo.png" alt="Spotify Logo" /></a>
 		</div>
 		<div class="card-container">
 			<div class="card">
@@ -52,8 +52,7 @@
 							<img class="vote" src="images/thumbs-down.png" alt="Downvote" title="Dislike" />
 						</button>
 						<div class="player">
-							<iframe style="border-radius: 12px"
-								src="https://open.spotify.com/embed/episode/1ufllYjq3698eoNWOnCi6e?utm_source=generator&t=0"
+							<iframe id="playContent" style="border-radius: 12px"								
 								width="100%" height="352" frameborder="0" allowfullscreen=""
 								allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
 								loading="lazy"></iframe>
@@ -62,10 +61,14 @@
 							<img class="vote" src="images/thumbs-up.png" alt="Upvote" title="Like" />
 						</button>
 						<div></div>
-						<div class="info">
-							<a id="infoLink" href="mainPodcast.html" alt="Information" title="Information">
+						<div class="info" onclick="togglePopup()">
+							<a id="infoLink" alt="Information" title="Information">
 								<i id="infoCircle" class="fa-solid fa-circle-info fa-2xl"></i>
-							</a>
+							</a> <span class="popuptext" id="infoPopup">
+							<h3>About</h3> <p>News comes at you fast. Join us at the end of your day to understand it. 
+							Today, Explained is your all killer, no filler, Monday to Friday news explainer 
+							co-hosted by Sean Rameswaram and Noel King. Every episode features the finest 
+							reporters from the Vox Media Podcast Network and beyond.</p></span>
 						</div>
 					</div>
 				</div>

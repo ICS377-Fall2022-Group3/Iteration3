@@ -309,7 +309,7 @@ input:checked + .slider:before {
   .info .popuptext {
 	visibility: hidden;
 	width: 50%;
-	height: 72%;
+	height: 80%;
 	background-color: #555;
 	color: #fff;
 	text-align: center;
@@ -317,7 +317,7 @@ input:checked + .slider:before {
 	padding: 8px 0;
 	position: absolute;
 	z-index: 2 ;
-	bottom: 23%;
+	bottom: 10%;
 	left: 31.5%;
 	margin-left: -80px;
   }
