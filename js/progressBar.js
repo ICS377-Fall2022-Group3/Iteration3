@@ -1,3 +1,4 @@
+// @ts-nocheck
 /**
  * 
  */
@@ -22,39 +23,36 @@ infoLink.addEventListener("click", () => {
 
 downVote.addEventListener("click", () => {
 	active++;
-	if (active >= steps.length) {
+	if (active > steps.length) {
 		window.location.href = "results.html";
 	}
 	updateProgress();
-	getSongSource(active);
+	document.getElementById("playContent").src = getSongSource(active);
 });
 
 upVote.addEventListener("click", () => {
-	//getSongSource(active);
 
 	// @ts-ignore
 	sessionStorage.setItem(active, 'true');
-	// window.alert(likedContent[active-1]);
 
 	active++;
 
-	if (active >= steps.length) {
+	if (active > steps.length) {
 		window.location.href = "results.html";
 	}
 
 	updateProgress();
-	getSongSource(active);
+	document.getElementById("playContent").src = getSongSource(active);
 
 });
 
 progressNext.addEventListener("click", () => {
 	active++;
-	if (active >= steps.length) {
-		//active = steps.length;
+	if (active > steps.length) {
 		window.location.href = "results.html";
 	}
 	updateProgress();
-	getSongSource(active);
+	document.getElementById("playContent").src = getSongSource(active);
 });
 
 progressPrev.addEventListener("click", () => {
@@ -63,82 +61,47 @@ progressPrev.addEventListener("click", () => {
 		active = 1;
 	}
 	updateProgress();
-	getSongSource(active);
+	document.getElementById("playContent").src = getSongSource(active);
 });
 
 function contentInit() {
 	if (active === 1) {
 		sessionStorage.clear();
 	}
-	getSongSource(active);
+	document.getElementById("playContent").src = getSongSource(active);
 }
 function getSongSource(activeTrack) {
-	// window.alert("Index in getSongSource: " + activeTrack);
-	// @ts-ignore
-	var srcLink = "";
+	
 	switch (activeTrack) {
 		case 1:
-			//window.alert("Case 1: " + activeTrack);
-			// @ts-ignore
-			document.getElementById("playContent").src = "https://open.spotify.com/embed/track/6GqqGv8frU7kqzXkm2rewI?utm_source=generator&theme=0";
-			return srcLink = "https://open.spotify.com/embed/track/6GqqGv8frU7kqzXkm2rewI?utm_source=generator&theme=0";
+			return "https://open.spotify.com/embed/track/6GqqGv8frU7kqzXkm2rewI?utm_source=generator&theme=0";
 
 		case 2:
-			//window.alert("Case 2: " + activeTrack);
-			// @ts-ignore
-			document.getElementById("playContent").src = "https://open.spotify.com/embed/track/1HSVpIU0XU1WuwiBLBWAZd?utm_source=generator";
-			return srcLink = "https://open.spotify.com/embed/track/1HSVpIU0XU1WuwiBLBWAZd?utm_source=generator";
+			return "https://open.spotify.com/embed/track/1HSVpIU0XU1WuwiBLBWAZd?utm_source=generator";
 
 		case 3:
-			//window.alert("Case 3: " + activeTrack);
-			// @ts-ignore
-			document.getElementById("playContent").src = "https://open.spotify.com/embed/track/0aKAV3r05KViNXmUEZARZy?utm_source=generator";
-			return srcLink = "https://open.spotify.com/embed/track/0aKAV3r05KViNXmUEZARZy?utm_source=generator";
+			return "https://open.spotify.com/embed/track/0aKAV3r05KViNXmUEZARZy?utm_source=generator";
 
 		case 4:
-			//window.alert("Case 4: " + activeTrack);
-			// @ts-ignore
-			document.getElementById("playContent").src = "https://open.spotify.com/embed/track/6s0zNBSqmxWlJ1CXsOocXy?utm_source=generator";
-			return srcLink = "https://open.spotify.com/embed/track/6s0zNBSqmxWlJ1CXsOocXy?utm_source=generator";
+			return "https://open.spotify.com/embed/track/6s0zNBSqmxWlJ1CXsOocXy?utm_source=generator";
 
 		case 5:
-			//window.alert("Case 5: " + activeTrack);
-			// @ts-ignore
-			document.getElementById("playContent").src = "https://open.spotify.com/embed/album/0os1Gz3XMM6dduZSMxVuXs?utm_source=generator";
-			return srcLink = "https://open.spotify.com/embed/album/0os1Gz3XMM6dduZSMxVuXs?utm_source=generator";
-
+			return "https://open.spotify.com/embed/track/7B1QliUMZv7gSTUGAfMRRD?utm_source=generator";
 
 		case 6:
-			//window.alert("Case 6: " + activeTrack);
-			// @ts-ignore
-			document.getElementById("playContent").src = "https://open.spotify.com/embed/album/6CtZVmlfVS5SSUBHnjgFKG?utm_source=generator";
-			return srcLink = "https://open.spotify.com/embed/album/6CtZVmlfVS5SSUBHnjgFKG?utm_source=generator";
+			return "https://open.spotify.com/embed/track/4mBpC5e5UFUu1cV4hX6j8a?utm_source=generator";
 
 		case 7:
-			//window.alert("Case 7: " + activeTrack);
-			// @ts-ignore
-			document.getElementById("playContent").src = "https://open.spotify.com/embed/track/5iSEsR6NKjlC9SrIJkyL3k?utm_source=generator";
-			return srcLink = "https://open.spotify.com/embed/album/6CtZVmlfVS5SSUBHnjgFKG?utm_source=generator";
+			return "https://open.spotify.com/embed/track/5KqldkCunQ2rWxruMEtGh0?utm_source=generator";
 
 		case 8:
-			//window.alert("Case 8: " + activeTrack);
-			// @ts-ignore
-			document.getElementById("playContent").src = "https://open.spotify.com/embed/track/0j2T0R9dR9qdJYsB7ciXhf?utm_source=generator";
-			return srcLink = "https://open.spotify.com/embed/track/0j2T0R9dR9qdJYsB7ciXhf?utm_source=generator";
+			return "https://open.spotify.com/embed/track/0j2T0R9dR9qdJYsB7ciXhf?utm_source=generator";
 
 		case 9:
-			//window.alert("Case 9: " + activeTrack);
-			// @ts-ignore
-			document.getElementById("playContent").src = "https://open.spotify.com/embed/playlist/37i9dQZF1DX9tPFwDMOaN1?utm_source=generator";
-			return srcLink = "https://open.spotify.com/embed/playlist/37i9dQZF1DX9tPFwDMOaN1?utm_source=generator";
+			return "https://open.spotify.com/embed/track/5p8ThxM2OhJ0igfxkz0Z1q?utm_source=generator";
 
 		case 10:
-			//window.alert("Case 10: " + activeTrack);
-			// @ts-ignore
-			document.getElementById("playContent").src = "https://open.spotify.com/embed/playlist/37i9dQZF1DX2SFBzpAPi7n?utm_source=generator";
-			return srcLink = "https://open.spotify.com/embed/playlist/37i9dQZF1DX2SFBzpAPi7n?utm_source=generator";
-
-
+			return "https://open.spotify.com/embed/track/4A0BDmZFJY7cXhGRaRIjb1?utm_source=generator";
 		default:
 			break;
 	}
@@ -181,7 +144,7 @@ function setResults() {
 	let count = 0;
 
 
-	for (var i = 0; i < likedContent.length; i++) {
+	for (var i = 1; i < (likedContent.length + 1); i++) {
 
 		var parent = document.getElementById("wrapper");
 		let space = document.createElement("div");
@@ -195,10 +158,8 @@ function setResults() {
 		// @ts-ignore
 		if (sessionStorage.getItem(i) === "true") {
 			count++;
-
-			//likedContent[i] = true;
+			
 			//window.alert("Index: " + i);
-
 
 			// @ts-ignore
 			parent.appendChild(space);
@@ -212,7 +173,7 @@ function setResults() {
 			container2.className = "container2";
 
 			container2.appendChild(iframe);
-			iframe.id = "playContent";
+			iframe.id = "playContent"  + i;
 		
 			// @ts-ignore
 			iframe.style = "border-radius:12px"
