@@ -2,6 +2,7 @@
 
 #progress {
   position: relative;
+  padding-top: 5%;
   margin-bottom: 30px; 
   width:50%;
   margin:auto; 
@@ -11,7 +12,7 @@
   background: #1DB954;
   height: 5px;
   width: 0%;
-  top: 50%;
+  top: 80%;
   left: 0;
 }
 #progress-num {
@@ -25,7 +26,7 @@
   content: "";
   background-color: lightgray;
   position: absolute;
-  top: 50%;
+  top: 80%;
   left: 0;
   height: 5px;
   width: 100%;

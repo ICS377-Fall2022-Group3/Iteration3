@@ -30,18 +30,20 @@ downVote.addEventListener("click", () => {
 });
   
 upVote.addEventListener("click", () => {
-  active++;
-  // @ts-ignore
+  //getSongSource(active);
   
   // @ts-ignore
-  sessionStorage.setItem(active-1, 'true');
+  sessionStorage.setItem(active, 'true');
  // window.alert(likedContent[active-1]);
+ 
+  active++;
   
   if (active > steps.length) {
     window.location.href = "results.html"; 
   }
+  
   updateProgress();
-  getSongSource(active-1);
+  getSongSource(active);
   
 });
 
@@ -64,6 +66,9 @@ progressPrev.addEventListener("click", () => {
   getSongSource(active);
 });
 
+function contentInit(){
+  getSongSource(active);
+}
 function getSongSource(activeTrack){
  // window.alert("Index in getSongSource: " + activeTrack);
   // @ts-ignore
@@ -174,7 +179,7 @@ for (var i=0; i < likedContent.length; i++){
         count++;
         
 	     likedContent[i] = true;
-	     window.alert("Index: " + i);
+	     //window.alert("Index: " + i);
 	     
 	     
 	     // @ts-ignore
@@ -214,46 +219,8 @@ for (var i=0; i < likedContent.length; i++){
 	         // @ts-ignore
 		     parent.appendChild(space2);
 		     space2.className = "space";
-      	 }	    
+		     
+      	 }    
 	    }
- }   
+ }  
 }
-function setStatic() {
-    window.alert("In setStatic");
- 	var wrap = document.getElementById("wrapper");
-  	let tile2 = document.createElement("div");
-  	let tile3 = document.createElement("div");
-  	let switchClass = document.createElement("label");
-  	let check2 = document.createElement("input");
-  	let slider = document.createElement("span");
-  	let sliderText = document.createElement("p");
-  	let playlist = document.createElement("button");
-  	
- 	wrap.appendChild(tile2);
- 	tile2.className = "tile";
- 	
- 	wrap.appendChild(tile3);
- 	tile3.className = "tile";
- 	
- 	
- 	// @ts-ignore
- 	tile2.appendChild(switchClass);
- 	switchClass.className = "switch";
- 	
- 	switchClass.appendChild(check2);
- 	check2.type = ("checkbox");
- 	window.alert("2");
- 	
- 	tile2.appendChild(slider);
- 	slider.className = "slider round";
- 	
- 	tile2.appendChild(sliderText);
- 	sliderText.innerText = "Allow Spotify to add similar content";
- 	
- 	tile3.appendChild(playlist);
- 	playlist.className = "btn";
- 	playlist.innerText = "Create Playlist";
- 	// @ts-ignore
- 	playlist.onclick = "window.location='mainMusic.html';";	
- 	window.alert("Here");
-  }
