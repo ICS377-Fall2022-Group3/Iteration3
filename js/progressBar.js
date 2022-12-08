@@ -18,6 +18,7 @@ downVote.addEventListener("click", () => {
 	if (active > steps.length) {
 		window.location.href = "results.html";
 	}
+	
 	updateProgress();
 	document.getElementById("playContent").src = getSongSource(active);
 });
@@ -56,11 +57,28 @@ progressPrev.addEventListener("click", () => {
 	document.getElementById("playContent").src = getSongSource(active);
 });
 
+//initializes the Music page
 function contentInit() {
 	if (active === 1) {
 		sessionStorage.clear();
 	}
 	document.getElementById("playContent").src = getSongSource(active);
+}
+
+//initializes the audiobook page
+function audioInit() {
+	if (active === 1) {
+		sessionStorage.clear();
+	}
+	document.getElementById("playContent").src = getAudioBookSource(active);
+}
+
+//initializes the podcast page
+function podInit() {
+	if (active === 1) {
+		sessionStorage.clear();
+	}
+	document.getElementById("playContent").src = getPodcastSource(active);
 }
 function getSongSource(activeTrack) {
 	
@@ -82,27 +100,27 @@ function getSongSource(activeTrack) {
 			return "https://open.spotify.com/embed/track/6s0zNBSqmxWlJ1CXsOocXy?utm_source=generator";
 
 		case 5:
-			document.getElementById("infoPopup").innerHTML = " 5 NEW TEXT <br> NEW TEXT";
+			//document.getElementById("infoPopup").innerHTML = " 5 NEW TEXT <br> NEW TEXT";
 			return "https://open.spotify.com/embed/track/7B1QliUMZv7gSTUGAfMRRD?utm_source=generator";
 
 		case 6:
-			document.getElementById("infoPopup").innerHTML = " 6 NEW TEXT <br> NEW TEXT";
+			//document.getElementById("infoPopup").innerHTML = " 6 NEW TEXT <br> NEW TEXT";
 			return "https://open.spotify.com/embed/track/4mBpC5e5UFUu1cV4hX6j8a?utm_source=generator";
 
 		case 7:
-			document.getElementById("infoPopup").innerHTML = " 7 NEW TEXT <br> NEW TEXT";
+			//document.getElementById("infoPopup").innerHTML = " 7 NEW TEXT <br> NEW TEXT";
 			return "https://open.spotify.com/embed/track/5KqldkCunQ2rWxruMEtGh0?utm_source=generator";
 
 		case 8:
-			document.getElementById("infoPopup").innerHTML = " 8 NEW TEXT <br> NEW TEXT";
+			//document.getElementById("infoPopup").innerHTML = " 8 NEW TEXT <br> NEW TEXT";
 			return "https://open.spotify.com/embed/track/0j2T0R9dR9qdJYsB7ciXhf?utm_source=generator";
 
 		case 9:
-			document.getElementById("infoPopup").innerHTML = " 9 NEW TEXT <br> NEW TEXT";
+			//document.getElementById("infoPopup").innerHTML = " 9 NEW TEXT <br> NEW TEXT";
 			return "https://open.spotify.com/embed/track/5p8ThxM2OhJ0igfxkz0Z1q?utm_source=generator";
 
 		case 10:
-			document.getElementById("infoPopup").innerHTML = " 10 NEW TEXT <br> NEW TEXT";
+			//document.getElementById("infoPopup").innerHTML = " 10 NEW TEXT <br> NEW TEXT";
 			return "https://open.spotify.com/embed/track/4A0BDmZFJY7cXhGRaRIjb1?utm_source=generator";
 		default:
 			break;
@@ -210,44 +228,44 @@ function getPodcastSource(activeTrack){
   // @ts-ignore
   switch (activeTrack) {
   case 1:
- 	document.getElementById("infoPopup").innerHTML = " 55642 NEW TEXT <br> NEW TEXT";
-    return "https://open.spotify.com/embed/track/6GqqGv8frU7kqzXkm2rewI?utm_source=generator&theme=0";
+ 	//document.getElementById("infoPopup").innerHTML = " 55642 NEW TEXT <br> NEW TEXT";
+    return "https://open.spotify.com/embed/episode/4sPrTRtvZhxbZb859OSChb?utm_source=generator";
    //for info use infoPopup in HTML 
    
   case 2:
-    document.getElementById("infoPopup").innerHTML = " 55642 NEW TEXT <br> NEW TEXT";
-    return "https://open.spotify.com/embed/episode/5zcoHiM6uD0phX5PXOKA7r?utm_source=generator"; 
+    //document.getElementById("infoPopup").innerHTML = " 55642 NEW TEXT <br> NEW TEXT";
+    return "https://open.spotify.com/embed/episode/7G7iTlrCkK3D3RXUu7Mfo9?utm_source=generator"; 
 
   case 3:
-	document.getElementById("infoPopup").innerHTML = " 3 NEW TEXT <br> NEW TEXT";
-	return "https://open.spotify.com/embed/episode/6KxBQPNlWkARsvY9Jzn5G8?utm_source=generator";
+	//document.getElementById("infoPopup").innerHTML = " 3 NEW TEXT <br> NEW TEXT";
+	return "https://open.spotify.com/embed/show/3DgfoleqaW61T2amZQKINx?utm_source=generator";
   
   case 4:
-    document.getElementById("infoPopup").innerHTML = " 4 NEW TEXT <br> NEW TEXT";
-    return "https://open.spotify.com/embed/episode/6hFGZj08pUsMMAWKwswb0X?utm_source=generator";
+    //document.getElementById("infoPopup").innerHTML = " 4 NEW TEXT <br> NEW TEXT";
+    return "https://open.spotify.com/embed/episode/6hFGZj08pUsMMAWKwswb0X?utm_source=generator";//start here
 
   case 5:
-  	document.getElementById("infoPopup").innerHTML = " 5 NEW TEXT <br> NEW TEXT";
+  	//document.getElementById("infoPopup").innerHTML = " 5 NEW TEXT <br> NEW TEXT";
     return "https://open.spotify.com/embed/episode/6Cy5zZLam3VBuWBOhnCKCT?utm_source=generator";
 
   case 6:
-  	document.getElementById("infoPopup").innerHTML = " 6 NEW TEXT <br> NEW TEXT";
+  	//document.getElementById("infoPopup").innerHTML = " 6 NEW TEXT <br> NEW TEXT";
     return "https://open.spotify.com/embed/episode/5Ri5aFSaqdksOQBlaTT90l?utm_source=generator";
    
   case 7:
-  	document.getElementById("infoPopup").innerHTML = " 7 NEW TEXT <br> NEW TEXT";
+  	//document.getElementById("infoPopup").innerHTML = " 7 NEW TEXT <br> NEW TEXT";
     return "https://open.spotify.com/embed/episode/6cAxJUmz6sE6wLRNVSIJxb?utm_source=generator";
     
   case 8:
-  	document.getElementById("infoPopup").innerHTML = " 8 NEW TEXT <br> NEW TEXT";
+  //	document.getElementById("infoPopup").innerHTML = " 8 NEW TEXT <br> NEW TEXT";
     return "https://open.spotify.com/embed/episode/0UzWUphvdkOGgr0T9FeGti?utm_source=generator";
       
   case 9:
-  	document.getElementById("infoPopup").innerHTML = " 9 NEW TEXT <br> NEW TEXT";
+  	//document.getElementById("infoPopup").innerHTML = " 9 NEW TEXT <br> NEW TEXT";
     return "https://open.spotify.com/embed/episode/7K3rsm7gv43dLkUVMGHehe?utm_source=generator";
     
   case 10:
-  	document.getElementById("infoPopup").innerHTML = " 10 NEW TEXT <br> NEW TEXT";
+  //	document.getElementById("infoPopup").innerHTML = " 10 NEW TEXT <br> NEW TEXT";
     return "https://open.spotify.com/embed/episode/7gSw13WodICZhxRTAJEHFu?utm_source=generator";
     
   default:
@@ -260,36 +278,36 @@ function getAudioBookSource(activeTrack){
   // @ts-ignore
   switch (activeTrack) {
   case 1:
-    document.getElementById("infoPopup").innerHTML = " dsds1 NEW TEXT <br> NEW TEXT";
-    return "https://open.spotify.com/embed/track/6GqqGv8frU7kqzXkm2rewI?utm_source=generator&theme=0";
+   // document.getElementById("infoPopup").innerHTML = " dsds1 NEW TEXT <br> NEW TEXT";
+    return "https://open.spotify.com/show/2TgpnPWiqWl1xFEBNgmpNi?si=f023fd4e4b2c4297";
     
   case 2:
-    document.getElementById("infoPopup").innerHTML = " dsds2 NEW TEXT <br> NEW TEXT";
+   // document.getElementById("infoPopup").innerHTML = " dsds2 NEW TEXT <br> NEW TEXT";
     return "https://open.spotify.com/embed/episode/5zcoHiM6uD0phX5PXOKA7r?utm_source=generator"; 
     
   case 3:
-	document.getElementById("infoPopup").innerHTML = " 3 NEW TEXT <br> NEW TEXT";
+	//document.getElementById("infoPopup").innerHTML = " 3 NEW TEXT <br> NEW TEXT";
 	return "https://open.spotify.com/embed/episode/6hFGZj08pUsMMAWKwswb0X?utm_source=generator";
   
   case 4:
-    document.getElementById("infoPopup").innerHTML = " 4 NEW TEXT <br> NEW TEXT";
+   // document.getElementById("infoPopup").innerHTML = " 4 NEW TEXT <br> NEW TEXT";
     return "https://open.spotify.com/embed/episode/6Cy5zZLam3VBuWBOhnCKCT?utm_source=generator";
     
   
   case 5:
-  	document.getElementById("infoPopup").innerHTML = " 5 NEW TEXT <br> NEW TEXT";
+  //	document.getElementById("infoPopup").innerHTML = " 5 NEW TEXT <br> NEW TEXT";
     return "https://open.spotify.com/embed/album/0os1Gz3XMM6dduZSMxVuXs?utm_source=generator";
     
   case 6:
-  	document.getElementById("infoPopup").innerHTML = " 6 NEW TEXT <br> NEW TEXT";
+  	//document.getElementById("infoPopup").innerHTML = " 6 NEW TEXT <br> NEW TEXT";
     return "https://open.spotify.com/embed/episode/6KxBQPNlWkARsvY9Jzn5G8?utm_source=generator";
      
   case 7:
-  	document.getElementById("infoPopup").innerHTML = " 7 NEW TEXT <br> NEW TEXT";
+  	//document.getElementById("infoPopup").innerHTML = " 7 NEW TEXT <br> NEW TEXT";
     return "https://open.spotify.com/embed/track/5iSEsR6NKjlC9SrIJkyL3k?utm_source=generator";
       
   case 8:
-  	document.getElementById("infoPopup").innerHTML = " 8 NEW TEXT <br> NEW TEXT";
+  	//document.getElementById("infoPopup").innerHTML = " 8 NEW TEXT <br> NEW TEXT";
     return "https://open.spotify.com/embed/track/0j2T0R9dR9qdJYsB7ciXhf?utm_source=generator";
      
   case 9:
@@ -297,7 +315,7 @@ function getAudioBookSource(activeTrack){
     return "https://open.spotify.com/embed/playlist/37i9dQZF1DX9tPFwDMOaN1?utm_source=generator";
       
   case 10:
-  	document.getElementById("infoPopup").innerHTML = " 10 NEW TEXT <br> NEW TEXT";
+  	//document.getElementById("infoPopup").innerHTML = " 10 NEW TEXT <br> NEW TEXT";
     return "https://open.spotify.com/embed/playlist/37i9dQZF1DX2SFBzpAPi7n?utm_source=generator";
     
   default:
@@ -309,12 +327,14 @@ function getAudioBookSource(activeTrack){
 // Info Pop-up 
 function togglePopup() {
   var popup = document.getElementById("infoPopup");
+ 
   
   if(popup.classList.toggle === "show"){
     popup.classList.toggle("none");
   }else{
     popup.classList.toggle("show")
-    popup.innerHTML = " 5 NEW TEXT <br> NEW TEXT";
+   // popup.innerHTML = "https://open.spotify.com/artist/5t28BP42x2axFnqOOMg3CM";
+   
   }
 
 }
