@@ -7,8 +7,17 @@
 		<link rel="shortcut icon" href="images/logo-spotify-icon.png">
 		<script src="https://kit.fontawesome.com/887323dcd1.js"	crossorigin="anonymous"></script>
 		<script src="js/progressBar.js"></script>
+	
+	<script>
+		window.addEventListener("load", myInit, true); 
+		
+		function myInit(){
+			setResults();
+			setStatic();
+		}; 
+	</script>
 	</head>
-	<body onload = "setResults()">
+	<body>
 		<div class="main-container">
 			<div class="header">
 				<a href="index.html"><img src="images/spotify-logo.png" alt="Spotify Logo" /></a>
@@ -24,68 +33,7 @@
 					</div>
 					<div class="card-content">
 						<h1> Your results</h1>
-						<div class = "wrapper">
-							<div class="space">
-							</div>
-							<div class="tile">
-								<label class="container2">
-								<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0ttyQPhxTXajLR9vNCBvV9?utm_source=generator" width="100%" height="100" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-								<input type="checkbox" checked="checked">
-								<span class="checkmark"></span>
-								</label>	
-							</div>
-							<div class="space">
-							</div>
-							<div class="tile">
-								<label class="container2">
-								<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0ttyQPhxTXajLR9vNCBvV9?utm_source=generator" width="100%" height="100" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-								<input type="checkbox" checked="checked">
-								<span class="checkmark"></span>
-								</label>	
-							</div>
-							<div class="space">
-							</div>
-							<div class="space">
-							</div>
-							<div class="tile">
-								<label class="container2">
-								<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0ttyQPhxTXajLR9vNCBvV9?utm_source=generator" width="100%" height="100" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-								<input type="checkbox" checked="checked">
-								<span class="checkmark"></span>
-								</label>	
-							</div>
-							<div class="space">
-							</div>
-							<div class="tile">
-								<label class="container2">
-								<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0ttyQPhxTXajLR9vNCBvV9?utm_source=generator" width="100%" height="100" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-								<input type="checkbox" checked="checked">
-								<span class="checkmark"></span>
-								</label>	
-							</div>
-							<div class="space">
-							</div>
-							<div class="space">
-							</div>
-							<div class="tile">
-								<label class="container2">
-								<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0ttyQPhxTXajLR9vNCBvV9?utm_source=generator" width="100%" height="100" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-								<input type="checkbox" checked="checked">
-								<span class="checkmark"></span>
-								</label>	
-							</div>
-							<div class="space">
-							</div>
-							<div class="tile">
-								<label class="container2">
-								<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0ttyQPhxTXajLR9vNCBvV9?utm_source=generator" width="100%" height="100" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-								<input type="checkbox" checked="checked">
-								<span class="checkmark"></span>
-								</label>	
-							</div>
-							<div class="space">
-							</div>
-						</div>
+						<div id = "wrapper" class = "wrapper">
 						<div class="tile">
 							<label class="switch">
 							<input type="checkbox" checked>
@@ -99,7 +47,6 @@
 					</div>
 				</div>
 			</div>
-		</div>
 		</div>
 		</div>
 	</body>

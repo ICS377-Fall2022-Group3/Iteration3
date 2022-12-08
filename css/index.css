@@ -284,4 +284,5 @@ input:checked + .slider:before {
 	display: inline;
 	vetical-align: middle;
 	width: fit;
+	border: 2px purple;
 }
